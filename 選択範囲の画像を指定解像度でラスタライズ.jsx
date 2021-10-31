@@ -41,12 +41,12 @@ function rasterizeImage(){
 
 	//ラスタライズ処理
 	for (i = 0; i < targetItems.length; i++) {
-		const x1 = targetItems[i].visibleBounds[0];
-		const y1 = targetItems[i].visibleBounds[1];
-		const x2 = targetItems[i].visibleBounds[2];
-		const y2 = targetItems[i].visibleBounds[3];
-		const objectWidth = x2 - x1;
-		const objectHeight = y2 - y1;
+		var x1 = targetItems[i].visibleBounds[0];
+		var y1 = targetItems[i].visibleBounds[1];
+		var x2 = targetItems[i].visibleBounds[2];
+		var y2 = targetItems[i].visibleBounds[3];
+		var objectWidth = x2 - x1;
+		var objectHeight = y2 - y1;
 		try {
 		activeDocument.rasterize(targetItems[i], [x1, y1, x1 + objectWidth, y1 + objectHeight], rasterOption);
 		}
